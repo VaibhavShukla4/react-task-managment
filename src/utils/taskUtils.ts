@@ -1,6 +1,6 @@
 // src/utils/taskUtils.ts
 import { v4 as uuidv4 } from "uuid";
-import { Task } from "@/types/task";
+import { Task } from "./../types/task";
 
 export function createTask(title: string): Task {
   return {

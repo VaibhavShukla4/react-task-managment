@@ -1,4 +1,3 @@
-// src/app/store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./rootReducer";
 import localStorageMiddleware from "./localStorageMiddleware";
@@ -10,4 +9,8 @@ const store = configureStore({
 });
 
 export type AppDispatch = typeof store.dispatch;
+
+// ✅ This is the missing line
+export type RootState = ReturnType<typeof store.getState>;
+
 export default store;
